@@ -1,0 +1,26 @@
+- "Internship: GovTech":
+    description:
+      - DevOps Intern at Whole-of-Government Application Analytics
+      - Architectured multiple AWS solutions, covering over 30+ services, for existing and upcoming core products. Empowered agile end-to-end software delivery by crafting new pipelines and reducing runtime of existing Gitlab pipelines.
+      - Provisioned multiple complex microservices with Terraform and promoted reuse by introducing and maintaining essential modules. Developed solutions and spearheaded the adoption of ChatOps and automation for operational tasks for core products.
+      - Improved and enforced security standards with AWS IAM and VA tools.
+    date: Nov 2023 - Present
+    actions:
+      - text: Recommendation letter
+        asset: govtech_reccltr.pdf
+- "Workshop: EJC Unconference 2021":
+    description:
+      - Conducted an Unconference (workshop) in my Junior College with help from a website tutorial.
+      - Taught the basics of HTML, CSS and it's role in architecturing webpages. Participants are then guided to develop their own resumes, and deploy them as static websites in Github.
+    date: Aug 2021
+    actions:
+      - text: Website
+        link: https://algebananazzzzz.github.io/eunoiashining/tutorial/index.html
+- "Internship: Sustainable Learning Lab":
+    description:
+      - As an Assistant Content Creator, developed sample AI software with Python’s NumPy, Pandas, Sklearn and Keras libraries without aid, including a functional AI software that pulls JSON data from a weather forecast API in a gardening watering project.
+      - Collaborated in a project to accurately perform Facial and Image Recognition utilising OpenVino inference engine and Neural Compute Stick, and mentored in a hackathon organised for youths, guiding older peers to the finals.
+    date: June - July 2018
+    actions:
+      - text: Recommendation letter
+        asset: sl2_reccltr.pdf

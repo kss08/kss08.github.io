@@ -1,0 +1,70 @@
+include:
+  - project: algebananazzzzz/gitlabtemplates
+    ref: main
+    file:
+      - Jobs/terraform-jobs.yml
+      - Jobs/gatsby-jobs.yml
+      - Jobs/awscli-jobs.yml
+      - Rules/change-rule.yml
+
+variables:
+  ENV:
+    value: "dev"
+    options:
+      - "dev"
+      - "prd"
+    description: "The target environment for deployment"
+  WORKSPACE:
+    value: $ENV-web
+  TF_DIR: $CI_PROJECT_DIR/infra
+  ENABLE_RUNTIME_REDUCTION: true
+
+stages:
+  - "build"
+  - "test"
+  - "deploy"
+  - "deploy-assets"
+
+gatsby-build:
+  stage: build
+  variables:
+    SOURCE_DIR: $CI_PROJECT_DIR
+  extends:
+    - .gatsby:build
+    - .change-rule:gatsby
+
+terraform-plan:
+  stage: test
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+    TF_VAR_FILE: config/$ENV.tfvars
+  extends:
+    - .terraform:plan
+    - .change-rule:infra
+
+terraform-apply:
+  stage: deploy
+  dependencies:
+    - terraform-plan
+  extends:
+    - .terraform:apply
+    - .terraform:output
+    - .change-rule:infra
+
+s3-deploy:
+  stage: deploy-assets
+  needs:
+    - gatsby-build
+    - terraform-apply
+  dependencies:
+    - gatsby-build
+    - terraform-apply
+  before_script:
+    - if [ ! -f $CI_PROJECT_DIR/output.env ]; then echo "Pipeline failed because GitLab Cache is cleared. Please rerun pipeline again"; exit 1; fi
+    - source $CI_PROJECT_DIR/output.env
+    - export $DEST_BUCKET_NAME=$origin_bucket_name
+  variables:
+    SOURCE_DIR: $CI_PROJECT_DIR/public
+  extends:
+    - .awscli:s3-sync
+    - .change-rule:gatsby
