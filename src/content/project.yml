@@ -1,101 +1,115 @@
 projects:
-  - ProjectBalls (V2):
-      description: Full-Stack Web Application designed for coaches to craft gameplay snippets
-      additional_description: A web application specially designed with an intuitive editor to significantly enhance the speed and ease of crafting gameplay snippets for coaches. Deployed to Serverless AWS resources.
-      date: "2023"
+  - Project Name:
+      description: "A succinct description of the project's purpose and functionality"
+      additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
+      date: "Apr 2024"
       svgIcons:
+        - svgName: aws
+        - svgName: terraform
         - svgName: gatsbyjs
         - svgName: tailwindcss
-        - svgName: apollographql
-        - svgName: aws
-        - svgName: terraform
       actions:
         - text: Repo
-          link: https://github.com/algebananazzzzz/ProjectBallsBackend
+          link: https://github.com/algebananazzzzz/NocturnalProject
         - text: Demo
           color: purple
-          video: projectballs_demo.mp4
-        - text: Prod
-          color: fuchsia
-          link: https://projectballs.algebananazzzzz.com/
-  - Polymer:
-      description: DRY Frameworks to provision Serverless AWS resources using Terraform in CI/CD Pipelines
-      additional_description: Culmination of Open-Source starter templates for developing Apollo Servers / React Applications. They extract configuration from YAML to provision serverless resources using Terraform with GitHub Runners.
-      date: May - Aug 2023
+          video: demo.mp4
+  - Project Name:
+      description: "A succinct description of the project's purpose and functionality"
+      additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
+      date: "Apr 2024"
       svgIcons:
         - svgName: aws
         - svgName: terraform
-      actions:
-        - text: Repo
-          link: https://github.com/algebananazzzzz/PolymerBase
-        - text: Blog
-          color: purple
-          link: /blog/polymer
-  - AnelaBot:
-      description: A telegram reminder bot built with Natural Language Processing (AWS Comprehend)
-      additional_description: Utilizes a combination of Named Entity Recognition (NER) and Syntactic Analysis to extract dates from reminders. Deployed to Serverless AWS resources.
-      date: "2023"
-      svgIcons:
-        - svgName: aws
-        - svgName: terraform
-        - svgName: nlp
-      actions:
-        - text: Repo
-          link: https://github.com/algebananazzzzz/AnelaBot
-        - text: Demo
-          color: purple
-          video: anelabot_demo.mp4
-        - text: Prod
-          color: fuchsia
-          link: https://t.me/AnelaBot
-  - Nocturnal:
-      description: Responsive Dark Themed Portfolio template used to provision this site
-      additional_description: An Open-Sourced portfolio template dedicated for public use. Designed to source page content from YAML files, providing ease of updating dynamic content. Uses Terraform and GitHub Actions to provision site resources.
-      date: "Aug 2023"
-      svgIcons:
         - svgName: gatsbyjs
         - svgName: tailwindcss
-        - svgName: aws
-        - svgName: terraform
       actions:
         - text: Repo
-          link: https://github.com/algebananazzzzz/Nocturnal
-        - text: Blog
+          link: https://github.com/algebananazzzzz/NocturnalProject
+        - text: Demo
           color: purple
-          link: /blog/nocturnal
-  - Python-Telegram-Bot-Quiz:
-      description: Framework to facilitate educators to quickly create and provision telegram quizbots
-      additional_description: Framework designed to source question configuration from JSON/YAML file, and provision Telegram QuizBot built with a cache layer with Terraform and Github Actions. Used to develop UltiRulesBot (see Prod).
-      date: "Nov 2022, Apr 2023"
+          video: demo.mp4
+  - Project Name:
+      description: "A succinct description of the project's purpose and functionality"
+      additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
+      date: "Apr 2024"
       svgIcons:
         - svgName: aws
         - svgName: terraform
+        - svgName: gatsbyjs
+        - svgName: tailwindcss
       actions:
         - text: Repo
-          link: https://github.com/algebananazzzzz/python-telegram-bot-quiz/tree/V2
+          link: https://github.com/algebananazzzzz/NocturnalProject
         - text: Demo
           color: purple
-          video: ptbq_demo.mp4
-        - text: Prod
-          color: fuchsia
-          link: https://t.me/ulti_rules_bot
+          video: demo.mp4
+  - Project Name:
+      description: "A succinct description of the project's purpose and functionality"
+      additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
+      date: "Apr 2024"
+      svgIcons:
+        - svgName: aws
+        - svgName: terraform
+        - svgName: gatsbyjs
+        - svgName: tailwindcss
+      actions:
+        - text: Repo
+          link: https://github.com/algebananazzzzz/NocturnalProject
+        - text: Demo
+          color: purple
+          video: demo.mp4
+  - Project Name:
+      description: "A succinct description of the project's purpose and functionality"
+      additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
+      date: "Apr 2024"
+      svgIcons:
+        - svgName: aws
+        - svgName: terraform
+        - svgName: gatsbyjs
+        - svgName: tailwindcss
+      actions:
+        - text: Repo
+          link: https://github.com/algebananazzzzz/NocturnalProject
+        - text: Demo
+          color: purple
+          video: demo.mp4
 other_sections:
   "Upcoming Projects":
-    - AnelaBot (V2):
-        description: Augmented NLP capabilities and features for a more personalized bot characterization
-        date: "2023"
-    - ProjectBalls (V3):
-        description: Addition of a feature to convert snippets to Birds-Eye-View using cv2 WarpPerspective
-        date: "2023"
-    - ElucidGPT:
-        description: Tool to train GPT models using user input to mitigate hallucinations, targeting academic use
-        date: "2023"
+    - Project Name:
+        date: "Apr 2024"
+        description: "A succinct description of the project's purpose and functionality"
+    - Project Name:
+        date: "Apr 2024"
+        description: "A succinct description of the project's purpose and functionality"
+    - Project Name:
+        date: "Apr 2024"
+        description: "A succinct description of the project's purpose and functionality"
+  "Archived Projects":
+    - Project Name:
+        description: "A succinct description of the project's purpose and functionality"
+        date: "Apr 2024"
         actions:
           - text: Repo
-            link: https://github.com/algebananazzzzz/AnelaBot
+            link: https://github.com/algebananazzzzz/NocturnalProject
           - text: Demo
             color: purple
-            video: anelabot_demo.mp4
-          - text: Prod
-            color: fuchsia
-            link: https://t.me/AnelaBot
+            video: demo.mp4
+    - Project Name:
+        description: "A succinct description of the project's purpose and functionality"
+        date: "Apr 2024"
+        actions:
+          - text: Repo
+            link: https://github.com/algebananazzzzz/NocturnalProject
+          - text: Demo
+            color: purple
+            video: demo.mp4
+    - Project Name:
+        description: "A succinct description of the project's purpose and functionality"
+        date: "Apr 2024"
+        actions:
+          - text: Repo
+            link: https://github.com/algebananazzzzz/NocturnalProject
+          - text: Demo
+            color: purple
+            video: demo.mp4

@@ -1,4 +1,4 @@
-title: Algebananazzzzz
+title: My Portfolio
 
 contact_buttons:
   # For Contact buttons. Optional, remove to omit from navbar
@@ -26,4 +26,4 @@ external_links:
   - title: Blog
     link: https://algebananazzzzz.notion.site/2982dce565be45b692670d2f92b99b95?v=9acbf5d8ae02436d990dda4a89a56560
   - title: Resume
-    asset: govtech_reccltr.pdf
+    asset: dummy.pdf

@@ -1,6 +1,7 @@
 import React from "react"
 import HomeLayout from "../components/layout/home-layout"
 import SkillContent from '../content/skill.yml'
+import AboutContent from '../content/aboutme.yml'
 import parse from 'html-react-parser';
 import Text from "../components/ui/text"
 import Header from "../components/ui/header"
@@ -18,9 +19,13 @@ const SkillsPage = () => {
               <h1 className="flex-none font-medium text-gray-800 dark:text-gray-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl inline-flex items-center">
                 Skills
               </h1>
-              <p className="flex text-justify mt-5 text-base md:text-lg text-gray-700 dark:text-gray-400">
-                Browse through my professional certificates and skillsets that demonstrates my areas of proficiency
-              </p>
+              {
+                AboutContent.skills_description.map((value) => {
+                  return <p className="flex mt-5 text-justify text-base md:text-lg text-gray-700 dark:text-gray-400">
+                    {value}
+                  </p>
+                })
+              }
             </div>
             <div className="lg:col-span-3 mt-10 lg:mt-0 hidden lg:block">
               <svg viewBox="0 0 1024 1024" fill="#000000">

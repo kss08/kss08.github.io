@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import HomeLayout from "../components/layout/home-layout"
 import VideoPopupComponent from "../components/video-popup"
 import ProjectContent from '../content/project.yml'
+import AboutContent from '../content/aboutme.yml'
 import Text from "../components/ui/text"
 import SvgListed from "../components/ui/svgs";
 import Action from "../components/ui/action"
@@ -20,9 +21,13 @@ const ProjectPage = () => {
               <h1 className="flex-none font-medium text-gray-800 dark:text-gray-200 text-2xl sm:text-3xl md:text-4xl lg:text-5xl inline-flex items-center">
                 Projects
               </h1>
-              <p className="flex text-justify mt-5 text-base md:text-lg text-gray-700 dark:text-gray-400">
-                Explore my development projects where I channel my passion to create solutions to empower and benefit those in my community.
-              </p>
+              {
+                AboutContent.projects_description.map((value) => {
+                  return <p className="flex mt-5 text-justify text-base md:text-lg text-gray-700 dark:text-gray-400">
+                    {value}
+                  </p>
+                })
+              }
               {/* <Link to="/motivations" className="py-3 px-4 inline-flex justify-center items-center rounded-md bg-indigo-200 font-semibold text-gray-500 hover:text-white hover:bg-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all text-sm dark:bg-indigo-700 dark:hover:bg-indigo-600 dark:focus:ring-indigo-600 dark:text-white dark:focus:ring-offset-indigo-800">
                   Explore the driving force behind my projects
                 </Link> */}
@@ -41,9 +46,9 @@ const ProjectPage = () => {
 
               return <div className="group flex flex-col bg-white hover:bg-gray-200 hover:border-gray-300 border dark:border-gray-700 dark:hover:bg-gray-600 dark:hover:border-gray-500 transition-all duration-250  shadow-sm rounded-md px-4 md:px-5 dark:bg-gray-800 dark:shadow-slate-700/[.7]">
                 <div className="child block group-hover:hidden py-4 md:py-5">
-                  <p className="text-sm font-medium text-fuchsia-500 dark:text-fuchsia-500">
+                  {content.date && <p className="text-sm font-medium text-fuchsia-500 dark:text-fuchsia-500">
                     {content.date}
-                  </p>
+                  </p>}
                   <Text classes="mt-1 font-bold" sizeSm="md" sizeMd="xl" contrastLevel={1} text={name}></Text>
                   <Text classes="mt-2" sizeMd="base" text={content.description}></Text>
                   <div className="mt-2 flex items-center gap-x-5 p-2">
@@ -66,7 +71,7 @@ const ProjectPage = () => {
               </div>
             })}
           </div>
-          {Object.entries(ProjectContent.other_sections).map(([title, projects]) => {
+          {ProjectContent.other_sections && Object.entries(ProjectContent.other_sections).map(([title, projects]) => {
             return <>
               <p className="flex mt-5 text-base md:text-lg text-gray-800 dark:text-gray-300">
                 {title}
@@ -77,9 +82,9 @@ const ProjectPage = () => {
 
                   return <div className={`group flex flex-col bg-white border dark:border-gray-700 shadow-sm rounded-md px-4 md:px-5 dark:bg-gray-800 hover:bg-gray-200 dark:shadow-slate-700/[.7] ${content.additional_description && "hover:border-gray-300 dark:hover:bg-gray-600 dark:hover:border-gray-500 transition-all duration-250"}`}>
                     <div className={`child block py-4 md:py-5 ${content.additional_description && "group-hover:hidden"}`}>
-                      <p className="text-sm font-medium text-fuchsia-500 dark:text-fuchsia-500">
+                      {content.date && <p className="text-sm font-medium text-fuchsia-500 dark:text-fuchsia-500">
                         {content.date}
-                      </p>
+                      </p>}
                       <Text classes="mt-1 font-bold" sizeSm="md" sizeMd="xl" contrastLevel={1} text={name}></Text>
                       <Text classes="mt-2" sizeMd="base" text={content.description}></Text>
                       {!content.additional_description && content.actions && <div className="mt-2 flex gap-x-2">
