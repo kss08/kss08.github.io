@@ -4,9 +4,10 @@ projects:
       additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
       date: "Apr 2024"
       svgIcons:
+        - svgName: gatsby
         - svgName: aws
+          darkModeEnabled: true
         - svgName: terraform
-        - svgName: gatsbyjs
         - svgName: tailwindcss
       actions:
         - text: Repo
@@ -19,9 +20,10 @@ projects:
       additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
       date: "Apr 2024"
       svgIcons:
+        - svgName: gatsby
         - svgName: aws
+          darkModeEnabled: true
         - svgName: terraform
-        - svgName: gatsbyjs
         - svgName: tailwindcss
       actions:
         - text: Repo
@@ -34,39 +36,10 @@ projects:
       additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
       date: "Apr 2024"
       svgIcons:
+        - svgName: gatsby
         - svgName: aws
+          darkModeEnabled: true
         - svgName: terraform
-        - svgName: gatsbyjs
-        - svgName: tailwindcss
-      actions:
-        - text: Repo
-          link: https://github.com/algebananazzzzz/NocturnalProject
-        - text: Demo
-          color: purple
-          video: demo.mp4
-  - Project Name:
-      description: "A succinct description of the project's purpose and functionality"
-      additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
-      date: "Apr 2024"
-      svgIcons:
-        - svgName: aws
-        - svgName: terraform
-        - svgName: gatsbyjs
-        - svgName: tailwindcss
-      actions:
-        - text: Repo
-          link: https://github.com/algebananazzzzz/NocturnalProject
-        - text: Demo
-          color: purple
-          video: demo.mp4
-  - Project Name:
-      description: "A succinct description of the project's purpose and functionality"
-      additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
-      date: "Apr 2024"
-      svgIcons:
-        - svgName: aws
-        - svgName: terraform
-        - svgName: gatsbyjs
         - svgName: tailwindcss
       actions:
         - text: Repo

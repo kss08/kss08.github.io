@@ -1,16 +1,16 @@
-- "Internship: Company Name":
+- "Internship: [Company Name]":
     description:
-      - "DevOps Intern at Company. Contributed to architecting AWS solutions for core products, optimizing GitLab pipelines, and promoting DevOps best practices."
-      - "Utilized Terraform to provision microservices and championed automation initiatives using ChatOps. Implemented and enforced security standards with AWS IAM and vulnerability assessment tools."
-    date: "Nov 2023 - Present"
+      - "Description of tasks and responsibilities during the internship."
+      - "Details about projects worked on and skills utilized."
+    date: "Start Date - End Date"
     actions:
       - text: "Recommendation Letter"
         asset: "dummy.pdf"
-- "Mentor: Workshop Name":
+- "Mentor: [Workshop Name]":
     description:
-      - "Conducted a workshop on web development fundamentals, guiding participants in creating static websites."
-      - "Introduced HTML and CSS basics and assisted attendees in deploying their projects on GitHub."
-    date: "Aug 2024"
+      - "Overview of the workshop and topics covered."
+      - "Information about assisting participants and facilitating learning."
+    date: "Start Date - End Date"
     actions:
       - text: "View Tutorial"
         link: "https://example.com/workshop-tutorial"

@@ -3,8 +3,7 @@ import { Link } from 'gatsby';
 import { ThemeContext } from '../theme/theme-context';
 import PageContent from '../../content/navbar.yml'
 import ThemeToggler from '../theme/dark-toggler';
-import Svg from '../ui/svg';
-import parse from 'html-react-parser';
+import ContactButton from "../../components/ui/contact-button"
 import A from '../ui/a'
 
 const HomeLayout = ({ children }) => {
@@ -23,11 +22,10 @@ const HomeLayout = ({ children }) => {
                 <div className="mr-5 md:mr-8">
                     <Link className="flex-none text-lg md:text-xl font-semibold dark:text-white" to="/">{PageContent.title}</Link>
                 </div>
-                <div className="flex flex-row items-center gap-2">
+                <div className="flex flex-row items-center gap-3">
                     {PageContent.contact_buttons.map((value) => {
-                        return <Svg link={value.link} svgViewBox={value.viewbox}>
-                            {parse(value.path)}
-                        </Svg>
+                        return <ContactButton svgName={value.svgName} link={value.link}>
+                        </ContactButton>
                     })}
                 </div>
             </nav>
@@ -73,7 +71,7 @@ const HomeLayout = ({ children }) => {
                     </a>
                     <a href="https://tailwindcss.com" className="inline-flex justify-center items-center w-10 h-10 text-center text-gray-600 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800" >
                         <svg fill="#38bdf8" className="w-5 h-5" viewBox="0 0 24 24"  >
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"></path>
+                            <path fillRule="evenodd" clipRule="evenodd" d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"></path>
                         </svg>
                     </a>
                     <a href="https://github.com/features/actions" className="inline-flex justify-center items-center w-10 h-10 text-center text-gray-600 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800" >

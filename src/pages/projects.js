@@ -1,10 +1,9 @@
 import React, { useState } from "react"
 import HomeLayout from "../components/layout/home-layout"
-import VideoPopupComponent from "../components/video-popup"
+import VideoPopupComponent from "../components/ui/video-popup"
 import ProjectContent from '../content/project.yml'
 import AboutContent from '../content/aboutme.yml'
-import Text from "../components/ui/text"
-import SvgListed from "../components/ui/svgs";
+import Svg from "../components/ui/svg";
 import Action from "../components/ui/action"
 
 const ProjectPage = () => {
@@ -28,9 +27,6 @@ const ProjectPage = () => {
                   </p>
                 })
               }
-              {/* <Link to="/motivations" className="py-3 px-4 inline-flex justify-center items-center rounded-md bg-indigo-200 font-semibold text-gray-500 hover:text-white hover:bg-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all text-sm dark:bg-indigo-700 dark:hover:bg-indigo-600 dark:focus:ring-indigo-600 dark:text-white dark:focus:ring-offset-indigo-800">
-                  Explore the driving force behind my projects
-                </Link> */}
             </div>
             <div className="lg:col-span-3 mt-10 lg:mt-0 hidden lg:block">
               <svg viewBox="0 0 1024 1024" fill="#000000">
@@ -40,8 +36,6 @@ const ProjectPage = () => {
           </div>
           <div className="pt-12 lg:pt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {ProjectContent.projects.map((value) => {
-              <Text classes="pt-5" text="Upcoming...">
-              </Text>
               const [[name, content]] = Object.entries(value);
 
               return <div className="group flex flex-col bg-white hover:bg-gray-200 hover:border-gray-300 border dark:border-gray-700 dark:hover:bg-gray-600 dark:hover:border-gray-500 transition-all duration-250  shadow-sm rounded-md px-4 md:px-5 dark:bg-gray-800 dark:shadow-slate-700/[.7]">
@@ -49,12 +43,17 @@ const ProjectPage = () => {
                   {content.date && <p className="text-sm font-medium text-fuchsia-500 dark:text-fuchsia-500">
                     {content.date}
                   </p>}
-                  <Text classes="mt-1 font-bold" sizeSm="md" sizeMd="xl" contrastLevel={1} text={name}></Text>
-                  <Text classes="mt-2" sizeMd="base" text={content.description}></Text>
-                  <div className="mt-2 flex items-center gap-x-5 p-2">
+                  <p className="mt-1 font-bold text-md md:text-xl text-gray-800 dark:text-gray-200">
+                    {name}
+                  </p>
+                  <p className="mt-2 text-base text-gray-700 dark:text-gray-400">
+                    {content.description}
+                  </p>
+                  <div className="mt-2 flex items-center gap-x-1">
                     {content.svgIcons.map((value) => {
-                      return <SvgListed svgName={value.svgName} svgSizeSm={5} redirect={value.redirect}>
-                      </SvgListed>
+                      return <div className='inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-600 dark:text-gray-400'>
+                        <Svg key={value.svgName} svgName={value.svgName} darkModeEnabled={value.darkModeEnabled} svgSizeSm="5" svgSizeMd="7"></Svg>
+                      </div>
                     })}
                   </div>
                 </div>
@@ -73,7 +72,7 @@ const ProjectPage = () => {
           </div>
           {ProjectContent.other_sections && Object.entries(ProjectContent.other_sections).map(([title, projects]) => {
             return <>
-              <p className="flex mt-5 text-base md:text-lg text-gray-800 dark:text-gray-300">
+              <p className="pt-5 md:pt-7 text-lg md:text-xl text-gray-900 dark:text-gray-200 font-medium inline-flex items-center">
                 {title}
               </p>
               <div className="pt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -85,8 +84,12 @@ const ProjectPage = () => {
                       {content.date && <p className="text-sm font-medium text-fuchsia-500 dark:text-fuchsia-500">
                         {content.date}
                       </p>}
-                      <Text classes="mt-1 font-bold" sizeSm="md" sizeMd="xl" contrastLevel={1} text={name}></Text>
-                      <Text classes="mt-2" sizeMd="base" text={content.description}></Text>
+                      <p className="mt-1 font-bold text-md md:text-xl text-gray-800 dark:text-gray-200">
+                        {name}
+                      </p>
+                      <p className="mt-2 text-base text-gray-700 dark:text-gray-400">
+                        {content.description}
+                      </p>
                       {!content.additional_description && content.actions && <div className="mt-2 flex gap-x-2">
                         {content.actions.map((value) => {
                           return <Action text={value.text} action={value.video ? () => { setPopup(value.video) } : null} asset={value.asset} link={value.link} color={value.color}></Action>
@@ -94,8 +97,9 @@ const ProjectPage = () => {
                       </div>}
                       {content.svgIcons && <div className="mt-2 flex items-center gap-x-5 p-2">
                         {content.svgIcons.map((value) => {
-                          return <SvgListed svgName={value.svgName} svgSizeSm={5} redirect={value.redirect}>
-                          </SvgListed>
+                          return <div className='inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-600 dark:text-gray-400'>
+                            <Svg key={value.svgName} svgName={value.svgName} darkModeEnabled={value.darkModeEnabled} svgSizeSm="5" svgSizeMd="7"></Svg>
+                          </div>
                         })}
                       </div>}
                     </div>
