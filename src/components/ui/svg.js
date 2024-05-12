@@ -1,21 +1,26 @@
 import * as React from 'react';
+import parse from 'html-react-parser';
+import SvgContent from '../../content/svgs.yml'
 import { ThemeContext } from '../theme/theme-context';
 
-const Svg = ({ svgName, svgSizeSm = 4, svgSizeMd = 5, darkModeEnabled = false }) => {
+const Svg = ({ svgName, svgSizeSm = 4, svgSizeMd = 5 }) => {
     const { theme } = React.useContext(ThemeContext)
     const [svgSrc, setSvgSrc] = React.useState(null);
 
     React.useEffect(() => {
-        import(`../../static/assets/${svgName}${darkModeEnabled ? theme ? "-dark" : "-light" : ""}.svg`)
-            .then(module => {
-                setSvgSrc(module.default);
-            })
-            .catch(error => {
-                console.error('Error loading svg:', error);
-            });
-    }, [svgName, theme, darkModeEnabled]);
+        const svgContent = SvgContent[svgName];
+        let updatedSvgSrc = svgContent;
 
-    return <img alt={svgName} className={`w-${svgSizeSm} md:w-${svgSizeMd} text-gray-600 dark:text-gray-400`} src={svgSrc}>
-    </img>
+        if (svgContent.darkModeEnabled && theme) {
+            updatedSvgSrc = svgContent.dark;
+        } else if (svgContent.darkModeEnabled) {
+            updatedSvgSrc = svgContent.light;
+        }
+        setSvgSrc(updatedSvgSrc);
+    }, [svgName, theme]);
+
+    return <div className={`w-${svgSizeSm} md:w-${svgSizeMd}`}>
+        {svgSrc && parse(svgSrc)}
+    </div >
 }
 export default Svg
