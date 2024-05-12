@@ -21,12 +21,11 @@ skillicons:
     darkModeEnabled: true
   - svgName: terraform
   - svgName: docker
-developerskills:
-  - Proficient coding experience across NodeJs, Python, Frontend languages and Linux Environments
-  - Mature understanding in using SQL / NoSQL Databases, Redis, Queue-systems as Cloud Microservices
-  - Competent in modern distributed framework integrations like React, Tailwind, and Apollo (GraphQL)
-  - Experience in using NLP for human text analysis
-devopsskills:
-  - Adept in harnessing AWS Cloud Infrastructure to integrate scalable, serverless microservices into development
-  - Seasoned in crafting Terraform IaC (Infrastructure as Code) modules to provision resources
-  - Familiar with using GitHub Actions to craft CI/CD pipelines with staging environments
+skills:
+  Proficient:
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum mauris ac tortor hendrerit, id convallis mauris blandit.
+    - Integer at velit molestie, fermentum quam non, suscipit nibh.
+    - Ut tincidunt purus ut lorem viverra, ac aliquet lacus tempus.
+  Competent:
+    - Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    - Vivamus tincidunt mauris non consequat aliquet.
