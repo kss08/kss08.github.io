@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import SvgContent from '../../content/contact-svgs.yml'
 import { ThemeContext } from '../theme/theme-context';
 
-const ContactButton = ({ svgName, link, svgSizeSm = 5, svgSizeMd = 7 }) => {
+const ContactButton = ({ svgName, link, svgSizeSm = 4, svgSizeMd = 5 }) => {
     const { theme } = React.useContext(ThemeContext)
     const [svgSrc, setSvgSrc] = React.useState(null);
 

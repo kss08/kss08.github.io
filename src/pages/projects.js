@@ -52,7 +52,7 @@ const ProjectPage = () => {
                   <div className="mt-2 flex items-center gap-x-1">
                     {content.svgIcons.map((value) => {
                       return <div className='inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-600 dark:text-gray-400'>
-                        <Svg key={value.svgName} svgName={value.svgName} darkModeEnabled={value.darkModeEnabled} svgSizeSm="5" svgSizeMd="7"></Svg>
+                        <Svg key={value} svgName={value}></Svg>
                       </div>
                     })}
                   </div>
@@ -98,7 +98,7 @@ const ProjectPage = () => {
                       {content.svgIcons && <div className="mt-2 flex items-center gap-x-5 p-2">
                         {content.svgIcons.map((value) => {
                           return <div className='inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-600 dark:text-gray-400'>
-                            <Svg key={value.svgName} svgName={value.svgName} darkModeEnabled={value.darkModeEnabled} svgSizeSm="5" svgSizeMd="7"></Svg>
+                            <Svg key={value} svgName={value}></Svg>
                           </div>
                         })}
                       </div>}

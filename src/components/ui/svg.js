@@ -11,12 +11,16 @@ const Svg = ({ svgName, svgSizeSm = 4, svgSizeMd = 5 }) => {
         const svgContent = SvgContent[svgName];
         let updatedSvgSrc = svgContent;
 
-        if (svgContent.darkModeEnabled && theme) {
-            updatedSvgSrc = svgContent.dark;
-        } else if (svgContent.darkModeEnabled) {
-            updatedSvgSrc = svgContent.light;
+        if (svgContent.darkModeEnabled) {
+            if (theme) {
+                updatedSvgSrc = svgContent.dark;
+            } else {
+                updatedSvgSrc = svgContent.light;
+            }
         }
+
         setSvgSrc(updatedSvgSrc);
+
     }, [svgName, theme]);
 
     return <div className={`w-${svgSizeSm} md:w-${svgSizeMd}`}>

@@ -55,7 +55,7 @@ const IndexPage = () => {
               return <a href={value.link} target='blank'>
                 <p className="hover:text-blue-600 dark:hover:text-blue-500 text-base md:text-lg text-gray-900 dark:text-gray-200 inline-flex items-center">
                   <div className="mr-2 h-auto">
-                    <Svg svgName={value.svg.svgName} darkModeEnabled={value.svg.darkModeEnabled} svgSizeSm={5} svgSizeMd={7}></Svg>
+                    <Svg svgName={value.svgName} svgSizeSm={5} svgSizeMd={7}></Svg>
                   </div>
                   {value.text}
                 </p>
@@ -65,7 +65,7 @@ const IndexPage = () => {
           <div className="mt-2 flex items-center gap-x-1 md:gap-x-2">
             {SkillContent.skillicons.map((value) => {
               return <div className='inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-600 dark:text-gray-400'>
-                <Svg key={value.svgName} svgName={value.svgName} darkModeEnabled={value.darkModeEnabled}></Svg>
+                <Svg key={value} svgName={value}></Svg>
               </div>
             })}
           </div>
@@ -98,7 +98,7 @@ const IndexPage = () => {
                 <div className="mt-2 flex items-center gap-x-1">
                   {content.svgIcons.map((value) => {
                     return <div className='inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-600 dark:text-gray-400'>
-                      <Svg key={value.svgName} svgName={value.svgName} darkModeEnabled={value.darkModeEnabled} svgSizeSm="5" svgSizeMd="7"></Svg>
+                      <Svg key={value} svgName={value}></Svg>
                     </div>
                   })}
                 </div>

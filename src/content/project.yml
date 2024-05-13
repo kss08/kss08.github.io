@@ -4,11 +4,10 @@ projects:
       additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
       date: "Apr 2024"
       svgIcons:
-        - svgName: gatsby
-        - svgName: aws
-          darkModeEnabled: true
-        - svgName: terraform
-        - svgName: tailwindcss
+        - gatsby
+        - aws
+        - terraform
+        - tailwindcss
       actions:
         - text: Repo
           link: https://github.com/algebananazzzzz/NocturnalProject
@@ -20,11 +19,10 @@ projects:
       additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
       date: "Apr 2024"
       svgIcons:
-        - svgName: gatsby
-        - svgName: aws
-          darkModeEnabled: true
-        - svgName: terraform
-        - svgName: tailwindcss
+        - gatsby
+        - aws
+        - terraform
+        - tailwindcss
       actions:
         - text: Repo
           link: https://github.com/algebananazzzzz/NocturnalProject
@@ -36,11 +34,10 @@ projects:
       additional_description: "A detailed description on the project's architecture, key components, and any unique selling points. This description should be more comprehensive than the short description."
       date: "Apr 2024"
       svgIcons:
-        - svgName: gatsby
-        - svgName: aws
-          darkModeEnabled: true
-        - svgName: terraform
-        - svgName: tailwindcss
+        - gatsby
+        - aws
+        - terraform
+        - tailwindcss
       actions:
         - text: Repo
           link: https://github.com/algebananazzzzz/NocturnalProject
