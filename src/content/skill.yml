@@ -1,12 +1,9 @@
 certificates:
-  - text: AWS Certified Solutions Architect Professional (SAP-C02)
-    link: https://www.credly.com/badges/ecf41b06-5426-4c3e-90f9-ba9196b78675/public_url
+  - text: AWS Certified XXX Professional
+    link: https://www.credly.com/organizations/amazon-web-services/badges
     svgName: aws
-  - text: AWS Certified Developer Associate (DVA-C02)
-    link: https://www.credly.com/badges/3fcda81e-fe66-49d2-be22-cb2d46150987/public_url
-    svgName: aws
-  - text: "HashiCorp Certified: Terraform Associate (003)"
-    link: https://www.credly.com/badges/2b4e8e39-4354-4edb-98dc-d43d07cdc589/public_url
+  - text: "HashiCorp Certified XXX"
+    link: https://www.credly.com/organizations/amazon-web-services/badges
     svgName: terraform
 skillicons:
   - gatsby

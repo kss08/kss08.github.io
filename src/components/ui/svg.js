@@ -5,11 +5,16 @@ import { ThemeContext } from '../theme/theme-context';
 
 const Svg = ({ svgName, svgSizeSm = 4, svgSizeMd = 5 }) => {
     const { theme } = React.useContext(ThemeContext)
-    const [svgSrc, setSvgSrc] = React.useState(null);
+    const [svgSrc, setSvgSrc] = React.useState("");
 
     React.useEffect(() => {
         const svgContent = SvgContent[svgName];
         let updatedSvgSrc = svgContent;
+
+        if (!svgContent) {
+            console.log("Error loading svg: ", svgName)
+            return
+        }
 
         if (svgContent.darkModeEnabled) {
             if (theme) {
