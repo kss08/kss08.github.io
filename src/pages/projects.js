@@ -3,8 +3,7 @@ import HomeLayout from "../components/layout/home-layout"
 import VideoPopupComponent from "../components/ui/video-popup"
 import ProjectContent from '../content/project.yml'
 import AboutContent from '../content/aboutme.yml'
-import Svg from "../components/ui/svg";
-import Action from "../components/ui/action"
+import ProjectCard from "../components/ui/project-card"
 
 const ProjectPage = () => {
   const [popup, setPopup] = useState(null)
@@ -38,36 +37,7 @@ const ProjectPage = () => {
             {ProjectContent.projects.map((value) => {
               const [[name, content]] = Object.entries(value);
 
-              return <div className="group flex flex-col bg-white hover:bg-gray-200 hover:border-gray-300 border dark:border-gray-700 dark:hover:bg-gray-600 dark:hover:border-gray-500 transition-all duration-250  shadow-sm rounded-md px-4 md:px-5 dark:bg-gray-800 dark:shadow-slate-700/[.7]">
-                <div className="child block group-hover:hidden py-4 md:py-5">
-                  {content.date && <p className="text-sm font-medium text-fuchsia-500 dark:text-fuchsia-500">
-                    {content.date}
-                  </p>}
-                  <p className="mt-1 font-bold text-md md:text-xl text-gray-800 dark:text-gray-200">
-                    {name}
-                  </p>
-                  <p className="mt-2 text-base text-gray-700 dark:text-gray-400">
-                    {content.description}
-                  </p>
-                  <div className="mt-2 flex items-center gap-x-1">
-                    {content.svgIcons.map((value) => {
-                      return <div className='inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-600 dark:text-gray-400'>
-                        <Svg key={value} svgName={value}></Svg>
-                      </div>
-                    })}
-                  </div>
-                </div>
-                <div className="child hidden group-hover:block py-3 md:py-4">
-                  <p className="text-gray-800 dark:text-gray-300 text-justify">
-                    {content.additional_description}
-                  </p>
-                  <div className="mt-2 flex gap-x-2">
-                    {content.actions.map((value) => {
-                      return <Action text={value.text} action={value.video ? () => { setPopup(value.video) } : null} asset={value.asset} link={value.link} color={value.color}></Action>
-                    })}
-                  </div>
-                </div>
-              </div>
+              return <ProjectCard setPopup={setPopup} name={name} date={content.date} svgIcons={content.svgIcons} actions={content.actions} description={content.description} additional_description={content.additional_description}></ProjectCard>
             })}
           </div>
           {ProjectContent.other_sections && Object.entries(ProjectContent.other_sections).map(([title, projects]) => {
@@ -79,41 +49,7 @@ const ProjectPage = () => {
                 {projects.map((value) => {
                   const [[name, content]] = Object.entries(value);
 
-                  return <div className={`group flex flex-col bg-white border dark:border-gray-700 shadow-sm rounded-md px-4 md:px-5 dark:bg-gray-800 hover:bg-gray-200 dark:shadow-slate-700/[.7] ${content.additional_description && "hover:border-gray-300 dark:hover:bg-gray-600 dark:hover:border-gray-500 transition-all duration-250"}`}>
-                    <div className={`child block py-4 md:py-5 ${content.additional_description && "group-hover:hidden"}`}>
-                      {content.date && <p className="text-sm font-medium text-fuchsia-500 dark:text-fuchsia-500">
-                        {content.date}
-                      </p>}
-                      <p className="mt-1 font-bold text-md md:text-xl text-gray-800 dark:text-gray-200">
-                        {name}
-                      </p>
-                      <p className="mt-2 text-base text-gray-700 dark:text-gray-400">
-                        {content.description}
-                      </p>
-                      {!content.additional_description && content.actions && <div className="mt-2 flex gap-x-2">
-                        {content.actions.map((value) => {
-                          return <Action text={value.text} action={value.video ? () => { setPopup(value.video) } : null} asset={value.asset} link={value.link} color={value.color}></Action>
-                        })}
-                      </div>}
-                      {content.svgIcons && <div className="mt-2 flex items-center gap-x-5 p-2">
-                        {content.svgIcons.map((value) => {
-                          return <div className='inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-600 dark:text-gray-400'>
-                            <Svg key={value} svgName={value}></Svg>
-                          </div>
-                        })}
-                      </div>}
-                    </div>
-                    {content.additional_description && <div className="child hidden group-hover:block py-3 md:py-4">
-                      <p className="text-gray-800 dark:text-gray-300 text-justify">
-                        {content.additional_description}
-                      </p>
-                      {content.actions && <div className="mt-2 flex gap-x-2">
-                        {content.actions.map((value) => {
-                          return <Action text={value.text} action={value.video ? () => { setPopup(value.video) } : null} asset={value.asset} link={value.link} color={value.color}></Action>
-                        })}
-                      </div>}
-                    </div>}
-                  </div>
+                  return <ProjectCard setPopup={setPopup} name={name} date={content.date} svgIcons={content.svgIcons} actions={content.actions} description={content.description} additional_description={content.additional_description}></ProjectCard>
                 })}
               </div>
             </>

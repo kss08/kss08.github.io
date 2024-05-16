@@ -29,21 +29,24 @@ const SkillsPage = () => {
               </svg>
             </div>
           </div>
-          <p className="pt-12 lg:pt-0 text-xl sm:text-3xl xl:text-4xl text-gray-900 dark:text-gray-200 font-medium inline-flex items-center">
-            Professional Certificates
-          </p>
-          <div className="mt-5 flex flex-col space-y-4 text-gray-700 dark:text-gray-300 ">
-            {SkillContent.certificates.slice(0, 3).map((value) => {
-              return <a href={value.link} target='blank'>
-                <p className="hover:text-blue-600 dark:hover:text-blue-500 text-base md:text-lg text-gray-900 dark:text-gray-200 inline-flex items-center">
-                  <div className="mr-2 h-auto">
-                    <Svg svgName={value.svgName} svgSizeSm={5} svgSizeMd={7}></Svg>
-                  </div>
-                  {value.text}
-                </p>
-              </a>
-            })}
-          </div>
+          {SkillContent.certificates && <>
+            <p className="pt-12 lg:pt-0 text-xl sm:text-3xl xl:text-4xl text-gray-900 dark:text-gray-200 font-medium inline-flex items-center">
+              Professional Certificates
+            </p>
+            <div className="mt-5 flex flex-col space-y-4 text-gray-700 dark:text-gray-300 ">
+              {SkillContent.certificates.slice(0, 3).map((value) => {
+                return <a href={value.link} target='blank'>
+                  <p className="hover:text-blue-600 dark:hover:text-blue-500 text-base md:text-lg text-gray-900 dark:text-gray-200 inline-flex items-center">
+                    <div className="mr-2 h-auto">
+                      <Svg svgName={value.svgName} svgSizeSm={5} svgSizeMd={7}></Svg>
+                    </div>
+                    {value.text}
+                  </p>
+                </a>
+              })}
+            </div>
+          </>
+          }
           <div className="pt-12 lg:pt-24 pb-10">
             <p className="text-xl sm:text-3xl xl:text-4xl text-gray-900 dark:text-gray-200 font-medium inline-flex items-center">
               Skills

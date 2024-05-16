@@ -1,5 +1,5 @@
 certificates:
-  - text: AWS Certified XXX Professional
+  - text: AWS Certified XXX
     link: https://www.credly.com/organizations/amazon-web-services/badges
     svgName: aws
   - text: "HashiCorp Certified XXX"
@@ -14,7 +14,7 @@ skillicons:
   - docker
 skills:
   Proficient:
-    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum mauris ac tortor hendrerit, id convallis mauris blandit.
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum mauris ac tortor hendrerit.
     - Integer at velit molestie, fermentum quam non, suscipit nibh.
     - Ut tincidunt purus ut lorem viverra, ac aliquet lacus tempus.
   Competent:

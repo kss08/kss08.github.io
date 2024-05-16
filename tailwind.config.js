@@ -11,7 +11,7 @@ module.exports = {
       variants: ['sm', 'md'],
     },
     {
-      pattern: /bg-(gray|blue|indigo|purple|violet|fuchsia|pink)-(100|200|300|400|500|600|700|800|900)/,
+      pattern: /bg-(gray|red|orange|yellow|green|cyan|blue|indigo|purple|violet|fuchsia|pink)-(500|600|700|800)/,
       variants: ['hover', 'focus'],
     },
   ],

@@ -1,14 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 import HomeLayout from "../components/layout/home-layout"
+import VideoPopupComponent from "../components/ui/video-popup"
 import AboutContent from '../content/aboutme.yml'
 import ExperienceContent from '../content/experience.yml'
 import Action from "../components/ui/action"
 
 const ExperiencePage = () => {
+  const [popup, setPopup] = useState(null)
 
   return (
     <HomeLayout>
       <body className="min-h-screen dark:bg-slate-900">
+        <VideoPopupComponent popup={popup} setPopup={setPopup} />
         <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
           <div className="pt-5 md:pt-0 grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 flex items-center">
             <div className="lg:col-span-4">
@@ -55,7 +58,7 @@ const ExperiencePage = () => {
                 })}
                 <div className="mt-6 flex gap-x-2">
                   {content.actions.map((value) => {
-                    return <Action text={value.text} asset={value.asset} link={value.link} color={value.color}></Action>
+                    return <Action text={value.text} action={value.video ? () => { setPopup(value.video) } : null} asset={value.asset} link={value.link} color={value.color}></Action>
                   })}
                 </div>
               </li>
