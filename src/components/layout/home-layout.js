@@ -16,8 +16,8 @@ const HomeLayout = ({ children }) => {
         setDate(dateString)
     }, [setDate])
 
-    return <body className="min-h-screen">
-        <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b text-sm py-3 sm:py-4 md:py-5 dark:bg-slate-900 dark:border-gray-700">
+    return <body className="min-h-screen dark:bg-slate-900 flex flex-col justify-between">
+        <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full border-b text-sm py-3 sm:py-4 md:py-5 dark:border-gray-800">
             <nav className="max-w-7xl flex justify-between items-center w-full mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mr-5 md:mr-8">
                     <Link className="flex-none text-lg md:text-xl font-semibold dark:text-white" to="/">{PageContent.title}</Link>
@@ -31,17 +31,17 @@ const HomeLayout = ({ children }) => {
             </nav>
         </header>
         <main id="content" role="main">
-            <nav className="z-10 sticky -top-px bg-white text-sm md:text-base font-medium text-black border-t border-b md:border-b-0 py-3 sm:py-4 md:py-5 -mt-px dark:bg-slate-900 dark:border-gray-800">
+            <nav className="bg-white dark:bg-slate-900 z-10 sticky -top-px text-sm md:text-base font-medium text-black border-t border-b md:border-b-0 py-3 sm:py-4 md:py-5 -mt-px dark:border-gray-800">
                 <div className="max-w-7xl snap-x w-full flex justify-between items-center px-4 sm:px-6 lg:px-8 mx-auto">
                     <div className='flex'>
                         <div className="snap-center shrink-0 pr-2 sm:pr-4 md:pr-8 text-gray-700 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500">
-                            <Link activeClassName='bg-clip-text bg-gradient-to-l from-yellow-600 to-rose-600 text-transparent dark:from-orange-400 dark:to-rose-500' className="inline-flex items-center" to="/skills">Skills</Link>
+                            <Link activeClassName='bg-clip-text bg-gradient-to-l from-yellow-600 to-rose-700 text-transparent dark:from-orange-400 dark:to-rose-500' className="inline-flex items-center" to="/skills">Skills</Link>
                         </div>
                         <div className="snap-center shrink-0 pr-2 sm:pr-4 md:pr-8 text-gray-700 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500">
-                            <Link activeClassName='bg-clip-text bg-gradient-to-l from-teal-600 to-yellow-500 text-transparent dark:from-teal-500 dark:to-yellow-400' className="inline-flex items-center" to="/projects">Projects</Link>
+                            <Link activeClassName='bg-clip-text bg-gradient-to-l from-blue-700 to-emerald-600 text-transparent dark:from-blue-500 dark:to-emerald-400' className="inline-flex items-center" to="/projects">Projects</Link>
                         </div>
                         <div className="snap-center shrink-0 pr-2 sm:pr-4 md:pr-8 text-gray-700 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500">
-                            <Link activeClassName='bg-clip-text bg-gradient-to-l from-indigo-600 to-teal-500 text-transparent dark:from-pink-500 dark:to-indigo-600' className="inline-flex items-center" to="/experiences">Experiences</Link>
+                            <Link activeClassName='bg-clip-text bg-gradient-to-l from-pink-700 to-indigo-600 text-transparent dark:from-pink-500 dark:to-indigo-600' className="inline-flex items-center" to="/experiences">Experiences</Link>
                         </div>
                         {PageContent.external_links.map((value) => {
                             return <div className="snap-center shrink-0 pr-2 sm:pr-4 md:pr-8 text-gray-800 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500">
@@ -54,7 +54,7 @@ const HomeLayout = ({ children }) => {
             </nav>
             {children}
         </main>
-        <footer className="bg-white dark:bg-slate-900 mt-auto w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+        <footer className="mt-auto w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto">
             <div className="text-center text-gray-600 dark:text-gray-400">
                 <p >Last updated on {date}</p>
                 <p >Crafted and deployed using these technologies</p>

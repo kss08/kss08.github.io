@@ -9,7 +9,7 @@ const ProjectCard = ({ setPopup, name, date, svgIcons, actions, description, add
             {date && <p className="text-sm font-medium text-fuchsia-500 dark:text-fuchsia-500">
                 {date}
             </p>}
-            <p className="mt-1 font-bold text-md md:text-xl text-gray-800 dark:text-gray-200">
+            <p className="mt-1 font-bold text-lg md:text-xl text-gray-800 dark:text-gray-200">
                 {name}
             </p>
             <p className="mt-2 text-base text-gray-700 dark:text-gray-400">

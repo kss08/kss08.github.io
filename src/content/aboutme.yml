@@ -2,9 +2,8 @@ title: "Hello, I'm [Your Name]"
 description:
   - Welcome to my portfolio page! 🌱
   - "As a [Your Profession], I [Your Professional Statement]."
-skills_description:
-  - "Explore my skills and certifications that showcase my expertise and commitment to growth."
-projects_description:
-  - "Discover my projects where I demonstrate creativity and problem-solving skills."
-experiences_description:
-  - "Learn about my professional experiences that have shaped my journey in [Your Field]."
+endeavours:
+  skill: I'm aspiring to pass the XXX Certification
+  project: I'm developing the XXX Project
+  # I'm currently studing in XXX Computer Sciences
+  experience: I'm currently interning in XXX
