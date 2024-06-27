@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       pattern: /bg-(gray|red|orange|yellow|green|cyan|blue|indigo|purple|violet|fuchsia|pink)-(500|600|700|800)/,
-      variants: ['hover', 'focus'],
+      variants: ['hover', 'focus', 'dark'],
     },
   ],
   theme: {

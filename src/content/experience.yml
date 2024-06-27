@@ -6,6 +6,7 @@ experiences:
         - "Description of tasks and responsibilities during the internship."
         - "Details about projects worked on and skills utilized."
       date: "Start Date - End Date"
+      color: blue
       actions:
         - text: "Recommendation Letter"
           asset: "dummy.pdf"
@@ -14,6 +15,7 @@ experiences:
         - "Overview of the workshop and topics covered."
         - "Information about assisting participants and facilitating learning."
       date: "Start Date - End Date"
+      color: purple
       actions:
         - text: "View Tutorial"
           link: "https://example.com/workshop-tutorial"
