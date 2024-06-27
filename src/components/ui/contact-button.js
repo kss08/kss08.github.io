@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import SvgContent from '../../content/contact-svgs.yml'
 import { ThemeContext } from '../theme/theme-context';
 
-const ContactButton = ({ svgName, link, svgSizeSm = 4, svgSizeMd = 5 }) => {
+const ContactButton = ({ svgName, link }) => {
     const { theme } = React.useContext(ThemeContext)
     const [svgSrc, setSvgSrc] = React.useState(null);
 
@@ -20,7 +20,7 @@ const ContactButton = ({ svgName, link, svgSizeSm = 4, svgSizeMd = 5 }) => {
     }, [svgName, theme]);
 
     return <a href={link} target='blank' className='inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-600 hover:bg-gray-100 rounded-full dark:text-gray-400 dark:hover:bg-gray-800'>
-        <div className={`w-${svgSizeSm} md:w-${svgSizeMd}`}>
+        <div className={`w-4 md:w-5`}>
             {svgSrc && parse(svgSrc)}
         </div >
     </a>
