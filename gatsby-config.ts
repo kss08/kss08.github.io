@@ -2,6 +2,8 @@ import type { GatsbyConfig } from "gatsby"
 import path from "path";
 
 const config: GatsbyConfig = {
+  // Change this according to your repository name
+  pathPrefix: `/NocturnalProject`,
   siteMetadata: {
     title: `Nocturnal Project`,
     siteUrl: `https://www.yourdomain.tld`,
