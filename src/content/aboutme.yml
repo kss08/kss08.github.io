@@ -3,7 +3,9 @@ description:
   - Welcome to my portfolio page! 🌱
   - "As a [Your Profession], I [Your Professional Statement]."
 endeavours:
-  skill: I'm aspiring to pass the XXX Certification
-  project: I'm developing the XXX Project
-  # I'm currently studing in XXX Computer Sciences
-  experience: I'm currently interning in XXX
+  - text: I'm aspiring to pass the XXX Certification
+    svgName: theme/spaceship
+  - text: I'm developing the XXX Project
+    svgName: theme/planet
+  - text: I'm currently interning in XXX
+    svgName: theme/astronaut

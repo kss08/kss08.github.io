@@ -1,7 +1,11 @@
-<<<<<<< HEAD
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Inline safelist */
+/* Background colors with hover and dark variants */
+@source inline('bg-{gray,red,orange,yellow,green,cyan,blue,indigo,purple,violet,fuchsia,pink}-{500,600,700,800}');
+@source inline('{hover:,dark:}bg-{gray,red,orange,yellow,green,cyan,blue,indigo,purple,violet,fuchsia,pink}-{500,600,700,800}');
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -21,13 +25,3 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #cbd5e1;
 }
-=======
-@import "tailwindcss";
-
-/* Inline safelist */
-/* Widths with responsive variants */
-@source inline('{sm:,md:}w-{4,5,7,10}');
-
-/* Background colors with hover and dark variants */
-@source inline('{hover:,dark:}bg-{gray,red,orange,yellow,green,cyan,blue,indigo,purple,violet,fuchsia,pink}-{500,600,700,800}');
->>>>>>> 510f768 (🦄 refactor(all files): change to typescript)

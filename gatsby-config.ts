@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby"
+import path from "path";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -12,13 +13,21 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-postcss',
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: path.resolve(__dirname, "src/assets/svg"),
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Nocturnal Project`,
         short_name: `Nocturnal`,
         start_url: `/`,
         display: `minimal-ui`,
-        icon: "src/images/icon.png",
+        icon: "src/assets/images/icon.png",
       },
     },
   ],

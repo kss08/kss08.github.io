@@ -12,22 +12,6 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-<<<<<<< HEAD
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "autoprefixer": "^10.4.19",
-    "gatsby": "^5.13.3",
-    "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-postcss": "^6.13.1",
-    "html-react-parser": "^5.1.10",
-    "postcss": "^8.4.38",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.4.3"
-  }
-}
-=======
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
   },
@@ -37,11 +21,11 @@
     "gatsby": "^5.14.6",
     "gatsby-plugin-manifest": "^5.15.0",
     "gatsby-plugin-postcss": "^6.15.0",
+    "gatsby-plugin-react-svg": "^3.3.0",
     "html-react-parser": "^5.2.6",
     "postcss": "^8.5.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
@@ -52,4 +36,3 @@
     "typescript": "^5.3.3"
   }
 }
->>>>>>> 510f768 (🦄 refactor(all files): change to typescript)
