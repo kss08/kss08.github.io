@@ -5,7 +5,7 @@ const VideoPopupComponent = ({ popup, setPopup }) => {
 
     useEffect(() => {
         if (popup) {
-            import(`../../static/${popup}`)
+            import(`../../../static/${popup}`)
                 .then(module => {
                     setVideoSrc(module.default);
                 })

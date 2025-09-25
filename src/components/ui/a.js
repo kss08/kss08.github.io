@@ -4,7 +4,11 @@ const A = ({ link, asset, text }) => {
     const [actionLink, setActionLink] = useState(link)
     useEffect(() => {
         if (asset) {
+<<<<<<< HEAD
             import(`../../static/${asset}`)
+=======
+            import(`../../../static/${asset}`)
+>>>>>>> 510f768 (🦄 refactor(all files): change to typescript)
                 .then(module => {
                     setActionLink(module.default);
                 })
