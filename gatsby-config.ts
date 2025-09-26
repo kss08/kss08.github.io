@@ -1,12 +1,18 @@
 import type { GatsbyConfig } from "gatsby"
 import path from "path";
 
+// Format build date
+const date = new Date();
+const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "short", day: "numeric" };
+const formatted = date.toLocaleDateString("en-US", options);
+
 const config: GatsbyConfig = {
   // Change this according to your repository name
   pathPrefix: `/NocturnalProject`,
   siteMetadata: {
     title: `Nocturnal Project`,
     siteUrl: `https://www.yourdomain.tld`,
+    lastUpdated: formatted,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -28,7 +34,6 @@ const config: GatsbyConfig = {
         name: `Nocturnal Project`,
         short_name: `Nocturnal`,
         start_url: `/`,
-        display: `minimal-ui`,
         icon: "src/assets/images/icon.png",
       },
     },

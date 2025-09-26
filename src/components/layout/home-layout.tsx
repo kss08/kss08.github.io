@@ -9,18 +9,22 @@ import DynamicLink from '@/components/ui/dynamic-link'
 import GatsbyLogo from "@/assets/svg/gatsby.svg";
 import ReactLogo from "@/assets/svg/reactjs.svg";
 import TailwindLogo from "@/assets/svg/tailwind.svg";
+import { graphql, useStaticQuery } from "gatsby";
 
 const navbar = rawNavbarContent as NavbarContent;
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
     const { theme, changeTheme } = React.useContext(ThemeContext)
-    const [date, setDate] = React.useState("")
 
-    React.useEffect(() => {
-        const now = new Date()
-        const dateString = now.toLocaleString('default', { day: 'numeric', month: 'short', year: "numeric" });
-        setDate(dateString)
-    }, [setDate])
+    const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          lastUpdated
+        }
+      }
+    }
+  `);
 
     return <>
         <body className="min-h-screen bg-white dark:bg-slate-900">
@@ -64,7 +68,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
         </body >
         <footer className="bg-white dark:bg-slate-900 mt-auto w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto">
             <div className="text-center text-gray-600 dark:text-gray-400">
-                <p >Last updated on {date}</p>
+                <p >Last updated on {data.site.siteMetadata.lastUpdated}</p>
                 <p >Crafted and deployed using these technologies</p>
                 <div className="mt-3 space-x-2 flex items-center justify-center">
                     <a aria-label="gatsbyjs" href="https://www.gatsbyjs.com" className="inline-flex justify-center items-center w-10 h-10 text-center text-gray-600 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800" >
