@@ -1,55 +1,82 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import type { NavbarContent } from '@/types/navbar';
+import type { NavbarContent } from "@/types/navbar";
+import GatsbyLogo from "@/assets/svg/gatsby.svg";
+import ReactLogo from "@/assets/svg/reactjs.svg";
+import TailwindLogo from "@/assets/svg/tailwind.svg";
+import ContactButton from '../ui/contact-button';
+
+const navbar: NavbarContent = {
+    title: "My Portfolio",
+    contact_buttons: [
+        {
+            svgName: "contact/github",
+            link: "https://github.com"
+        },
+        {
+            svgName: "contact/linkedin",
+            link: "https://www.linkedin.com/in"
+        }
+    ]
+};
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
-    const content: NavbarContent = {
-        title: "My Portfolio",
-        contact_buttons: [
-            {
-                name: "github",
-                link: "github.com"
-            },
-            {
-                name: "linkedin",
-                link: "linkedin.com/in"
-            }
-        ]
-    }
+    const date = new Date();
+    const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "short", day: "numeric" };
+    const formatted = date.toLocaleDateString("en-US", options);
 
-    return <body className="flex flex-col min-h-screen">
-        {/* Header */}
-        <header className="bg-blue-600 text-white p-4">
-            <h1 className="text-2xl font-bold">{content.title}</h1>
-            <nav className="flex justify-between border-t pt-4">
-                <div className='space-x-4'>
-                    <Link to="/">Home</Link>
-                    <Link to="/skills">Skills</Link>
-                    <Link to="/projects">Projects</Link>
-                    <Link to="/experiences">Experiences</Link>
+    return <>
+        <body className="min-h-screen bg-white dark:bg-slate-900">
+            <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full border-b text-sm py-3 sm:py-4 md:py-5 dark:border-gray-800">
+                <nav className="max-w-7xl flex justify-between items-center w-full mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="mr-5 md:mr-8">
+                        <Link className="flex-none text-lg md:text-xl font-semibold dark:text-white" to="/">{navbar.title}</Link>
+                    </div>
+                    <div className="flex flex-row items-center gap-3">
+                        {navbar.contact_buttons.map((value, i) => {
+                            return <ContactButton key={i} svgName={value.svgName} link={value.link}>
+                            </ContactButton>
+                        })}
+                    </div>
+                </nav>
+            </header>
+            <main id="content" role="main">
+                <nav className="bg-white dark:bg-slate-900 z-10 sticky -top-px text-sm md:text-base font-medium text-black border-t border-b md:border-b-0 py-3 sm:py-4 md:py-5 -mt-px border-gray-200 dark:border-gray-800">
+                    <div className="max-w-7xl snap-x w-full flex justify-between items-center px-4 sm:px-6 lg:px-8 mx-auto">
+                        <div className='flex'>
+                            <div className="snap-center shrink-0 pr-2 sm:pr-4 md:pr-8 text-gray-700 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500">
+                                <Link activeClassName='bg-clip-text bg-gradient-to-l from-yellow-600 to-rose-700 text-transparent dark:from-orange-400 dark:to-rose-500' className="inline-flex items-center" to="/skills">Skills</Link>
+                            </div>
+                            <div className="snap-center shrink-0 pr-2 sm:pr-4 md:pr-8 text-gray-700 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500">
+                                <Link activeClassName='bg-clip-text bg-gradient-to-l from-blue-700 to-emerald-600 text-transparent dark:from-blue-500 dark:to-emerald-400' className="inline-flex items-center" to="/projects">Projects</Link>
+                            </div>
+                            <div className="snap-center shrink-0 pr-2 sm:pr-4 md:pr-8 text-gray-700 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500">
+                                <Link activeClassName='bg-clip-text bg-gradient-to-l from-pink-700 to-indigo-600 text-transparent dark:from-pink-500 dark:to-indigo-600' className="inline-flex items-center" to="/experiences">Experiences</Link>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                {children}
+            </main>
+        </body >
+        <footer className="bg-white dark:bg-slate-900 mt-auto w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+            <div className="text-center text-gray-600 dark:text-gray-400">
+                <p >Last updated on {formatted}</p>
+                <p >Crafted and deployed using these technologies</p>
+                <div className="mt-3 space-x-2 flex items-center justify-center">
+                    <a aria-label="gatsbyjs" href="https://www.gatsbyjs.com" className="inline-flex justify-center items-center w-10 h-10 text-center text-gray-600 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800" >
+                        <GatsbyLogo className="w-4 h-4" />
+                    </a>
+                    <a aria-label="react" href="https://react.dev" className="inline-flex justify-center items-center w-10 h-10 text-center text-gray-600 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800" >
+                        <ReactLogo className="w-4 h-4" />
+                    </a>
+                    <a aria-label="tailwind" href="https://tailwindcss.com" className="inline-flex justify-center items-center w-10 h-10 text-center text-gray-600 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800" >
+                        <TailwindLogo className="w-4 h-4" />
+                    </a>
                 </div>
-                <div className='space-x-4'>
-                    {content.contact_buttons.map((button) => (
-                        <a
-                            href={button.link}
-                            target='blank'>
-                            {button.name}
-                        </a>
-                    ))}
-                </div>
-            </nav>
-        </header>
-
-        {/* Body */}
-        <main className="flex-1 p-6 bg-gray-100">
-            {children}
-        </main>
-
-        {/* Footer */}
-        <footer className="bg-gray-800 text-white p-4 text-center">
-            &copy; 2025 My Portfolio
+            </div>
         </footer>
-    </body>
+    </>
 }
 
 export default HomeLayout
