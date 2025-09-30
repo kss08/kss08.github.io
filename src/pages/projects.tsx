@@ -1,37 +1,14 @@
 import React from "react";
 import HomeLayout from "@/components/layout/home-layout";
+import rawProjectContent from '@/content/project.yml';
 import { ProjectContent } from "@/types/projects";
 import ProjectCard from "@/components/ui/project-card";
 import Svg from "@/components/ui/svg";
 
+const projects: ProjectContent = rawProjectContent;
+
 const ProjectsPage: React.FC = () => {
-  const projects: ProjectContent = {
-    description: [
-      "Discover my projects where I demonstrate creativity and problem-solving skills."
-    ],
-    projects: [
-      {
-        name: "Project 1",
-        description: "Description of project",
-        date: "Aug 2025 - Present",
-        svgIcons: ["reactjs", "gatsby", "tailwind"],
-        actions: [{
-          text: "Repo",
-          link: "https://github.com/ShearesWeb/ReactWorkSHop/blob/main/src/pages/index.tsx"
-        }]
-      },
-      {
-        name: "Project 2",
-        description: "Description of project",
-        date: "Aug 2025 - Present",
-        svgIcons: ["reactjs", "gatsby", "tailwind"],
-        actions: [{
-          text: "Repo",
-          link: "https://github.com/ShearesWeb/ReactWorkSHop/blob/main/src/pages/index.tsx"
-        }]
-      }
-    ]
-  }
+
   return (
     <HomeLayout>
       <div className="pt-10 md:pt-0 grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 flex items-center">
@@ -54,16 +31,6 @@ const ProjectsPage: React.FC = () => {
       <div className="pt-12 lg:pt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {projects.projects.map(project => <ProjectCard key={project.name} project={project} />)}
       </div>
-      {projects.other_sections && Object.entries(projects.other_sections).map(([title, projects]) => {
-        return <>
-          <p className="pt-5 md:pt-7 text-lg md:text-xl text-gray-900 dark:text-gray-200 font-medium inline-flex items-center">
-            {title}
-          </p>
-          <div className="pt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {projects.map(project => <ProjectCard key={project.name} project={project} />)}
-          </div>
-        </>
-      })}
     </HomeLayout>
   );
 };

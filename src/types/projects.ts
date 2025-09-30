@@ -9,12 +9,7 @@ export interface ProjectItem {
     actions?: ActionButtonField[];
 }
 
-export interface ProjectSection {
-    [sectionName: string]: ProjectItem[];
-}
-
 export interface ProjectContent {
     description: string[];
     projects: ProjectItem[];
-    other_sections?: ProjectSection;
 }
