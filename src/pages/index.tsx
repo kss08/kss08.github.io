@@ -51,7 +51,7 @@ const HomePage: React.FC = () => {
       </div>
       {about.about && Object.entries(about.about).map(([header, items], idx) => (
         <div
-          className={`max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto ${idx === 0 ? 'pt-12 lg:pt-0' : 'pt-8 md:pt-12'}`}
+          className={idx === 0 ? 'pt-12 lg:pt-0' : 'pt-8 md:pt-12'}
           key={header}>
           <div className="flex justify-between items-center">
             <p className="text-2xl sm:text-3xl xl:text-4xl text-gray-900 dark:text-gray-200 font-medium inline-flex items-center">
