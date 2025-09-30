@@ -1,36 +1,12 @@
 import React from "react";
 import HomeLayout from "@/components/layout/home-layout";
+import rawHomeContent from '@/content/about.yml';
 import type { AboutContent } from "@/types/about";
 import Svg from "@/components/ui/svg";
 
+const about: AboutContent = rawHomeContent;
+
 const HomePage: React.FC = () => {
-  const about: AboutContent = {
-    title: "Hi, I'm __name__",
-    description: [
-      "I am a Sheares Web Hero"
-    ],
-    about: {
-      "About Me": [
-        {
-          text: "I like Ultimate Frisbee"
-        }
-      ],
-      "Current Endeavours": [
-        {
-          svgName: "theme/spaceship",
-          text: "I'm aspiring to XXX"
-        },
-        {
-          svgName: "theme/planet",
-          text: "I'm developing XXX"
-        },
-        {
-          svgName: "theme/astronaut",
-          text: "I'm currently interning at XXX"
-        }
-      ]
-    }
-  }
 
   return (
     <HomeLayout>

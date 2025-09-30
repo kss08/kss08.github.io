@@ -1,0 +1,21 @@
+description:
+  - "Explore my skills and certifications that showcase my expertise and commitment to growth."
+certificates:
+  - text: Sheares Web Certified Developer
+    link: https://www.credly.com/organizations/amazon-web-services/badges
+    svgName: reactjs
+  - text: Sheares Web Certified UI Designer
+    link: https://www.credly.com/organizations/amazon-web-services/badges
+    svgName: tailwind
+skillicons:
+  - gatsby
+  - reactjs
+  - tailwind
+skills:
+  Proficient:
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum mauris ac tortor hendrerit.
+    - Integer at velit molestie, fermentum quam non, suscipit nibh.
+    - Ut tincidunt purus ut lorem viverra, ac aliquet lacus tempus.
+  Competent:
+    - Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    - Vivamus tincidunt mauris non consequat aliquet.

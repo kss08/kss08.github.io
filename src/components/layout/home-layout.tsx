@@ -1,24 +1,13 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
+import rawNavbarContent from '@/content/navbar.yml';
 import type { NavbarContent } from "@/types/navbar";
 import GatsbyLogo from "@/assets/svg/gatsby.svg";
 import ReactLogo from "@/assets/svg/reactjs.svg";
 import TailwindLogo from "@/assets/svg/tailwind.svg";
 import ContactButton from '../ui/contact-button';
 
-const navbar: NavbarContent = {
-    title: "My Portfolio",
-    contact_buttons: [
-        {
-            svgName: "contact/github",
-            link: "https://github.com"
-        },
-        {
-            svgName: "contact/linkedin",
-            link: "https://www.linkedin.com/in"
-        }
-    ]
-};
+const navbar: NavbarContent = rawNavbarContent;
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
     const date = new Date();
