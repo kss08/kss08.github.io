@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const HomePage: React.FC = () => {
+const ExperiencesPage: React.FC = () => {
   return (
     <body className="flex flex-col min-h-screen">
       {/* Header */}
@@ -34,4 +34,6 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default ExperiencesPage;
+
+export const Head = () => <title>Experiences</title>

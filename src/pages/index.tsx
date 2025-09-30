@@ -35,3 +35,5 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
+export const Head = () => <title>Home</title>
