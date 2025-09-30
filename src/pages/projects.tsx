@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
 
       {/* Body */}
       <main className="flex-1 p-6 bg-gray-100">
-        <h2 className="text-xl font-semibold mb-4">Home Page!</h2>
+        <h2 className="text-xl font-semibold mb-4">Projects Page!</h2>
         <p className="mb-2">
           This is a simple Gatsby page using React and Tailwind CSS.
         </p>
