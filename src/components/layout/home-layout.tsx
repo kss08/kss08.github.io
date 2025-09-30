@@ -6,10 +6,14 @@ import GatsbyLogo from "@/assets/svg/gatsby.svg";
 import ReactLogo from "@/assets/svg/reactjs.svg";
 import TailwindLogo from "@/assets/svg/tailwind.svg";
 import ContactButton from '../ui/contact-button';
+import ThemeToggler from '../theme/dark-toggler';
+import { ThemeContext } from '../theme/theme-context';
 
 const navbar: NavbarContent = rawNavbarContent;
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
+    const { theme, toggleTheme } = React.useContext(ThemeContext)
+
     const date = new Date();
     const options: Intl.DateTimeFormatOptions = { year: "numeric", month: "short", day: "numeric" };
     const formatted = date.toLocaleDateString("en-US", options);
@@ -43,6 +47,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
                                 <Link activeClassName='bg-clip-text bg-gradient-to-l from-pink-700 to-indigo-600 text-transparent dark:from-pink-500 dark:to-indigo-600' className="inline-flex items-center" to="/experiences">Experiences</Link>
                             </div>
                         </div>
+                        <ThemeToggler theme={theme} toggleTheme={toggleTheme} />
                     </div>
                 </nav>
                 <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
