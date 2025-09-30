@@ -34,21 +34,19 @@ const HomePage: React.FC = () => {
 
   return (
     <HomeLayout>
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="pt-10 md:pt-0 grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 flex items-center">
-          <div className="lg:col-span-4">
-            <h1 className="flex-none font-medium text-gray-800 dark:text-gray-200 text-3xl md:text-4xl lg:text-5xl inline-flex items-center">
-              {about.title}
-            </h1>
-            {about.description.map((value) => {
-              return <p className="flex mt-5 text-justify text-base md:text-lg text-gray-700 dark:text-gray-400">
-                {value}
-              </p>
-            })}
-          </div>
-          <div className="lg:col-span-3 mt-10 lg:mt-0 hidden lg:flex justify-end">
-            <Svg name="theme/home" className="w-112 h-112" />
-          </div>
+      <div className="pt-10 md:pt-0 grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 flex items-center">
+        <div className="lg:col-span-4">
+          <h1 className="flex-none font-medium text-gray-800 dark:text-gray-200 text-3xl md:text-4xl lg:text-5xl inline-flex items-center">
+            {about.title}
+          </h1>
+          {about.description.map((value) => {
+            return <p className="flex mt-5 text-justify text-base md:text-lg text-gray-700 dark:text-gray-400">
+              {value}
+            </p>
+          })}
+        </div>
+        <div className="lg:col-span-3 mt-10 lg:mt-0 hidden lg:flex justify-end">
+          <Svg name="theme/home" className="w-112 h-112" />
         </div>
       </div>
       {about.about && Object.entries(about.about).map(([header, items], idx) => (

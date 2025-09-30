@@ -56,7 +56,9 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
                         </div>
                     </div>
                 </nav>
-                {children}
+                <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+                    {children}
+                </div>
             </main>
         </body >
         <footer className="bg-white dark:bg-slate-900 mt-auto w-full py-10 px-4 sm:px-6 lg:px-8 mx-auto">
