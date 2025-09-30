@@ -1,17 +1,41 @@
 import React from "react";
 import HomeLayout from "@/components/layout/home-layout";
+import { ProjectContent } from "@/types/projects";
+import test from "node:test";
+import ProjectCard from "@/components/ui/project-card";
 
 const ProjectsPage: React.FC = () => {
+  const projects: ProjectContent = {
+    projects: [
+      {
+        name: "Project 1",
+        description: "Description of project",
+        date: "Aug 2025 - Present",
+        actions: [{
+          text: "Repo",
+          link: "https://github.com/ShearesWeb/ReactWorkSHop/blob/main/src/pages/index.tsx"
+        }]
+      },
+      {
+        name: "Project 2",
+        description: "Description of project",
+        date: "Aug 2025 - Present",
+        actions: [{
+          text: "Repo",
+          link: "https://github.com/ShearesWeb/ReactWorkSHop/blob/main/src/pages/index.tsx"
+        }]
+      }
+    ]
+  }
   return (
     <HomeLayout>
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
         <h2 className="text-xl font-semibold mb-4">Projects Page!</h2>
-        <p className="mb-2">
-          This is a simple Gatsby page using React and Tailwind CSS.
-        </p>
-        <p>
-          The body section grows to fill the available space between header and footer.
-        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {projects.projects.map(project => (
+            <ProjectCard project={project}></ProjectCard>
+          ))}
+        </div>
       </div>
     </HomeLayout>
   );
