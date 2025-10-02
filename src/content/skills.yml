@@ -1,21 +1,30 @@
 description:
-  - "Explore my skills and certifications that showcase my expertise and commitment to growth."
-certificates:
-  - text: Sheares Web Certified Developer
-    link: https://www.credly.com/organizations/amazon-web-services/badges
-    svgName: reactjs
-  - text: Sheares Web Certified UI Designer
-    link: https://www.credly.com/organizations/amazon-web-services/badges
-    svgName: tailwind
+  - "In Sheares Web, we leverage cutting-edge frameworks and technologies to deliver innovative, scalable, and future-ready solutions."
+  - "Our expertise spans web, app, and infrastructure development, supported by a strong culture of continuous learning and knowledge sharing."
 skillicons:
   - gatsby
   - reactjs
   - tailwind
+  - expo
+  - golang
+  - aws
+  - postgresql
+  - terraform 
+  - contact/github 
+  - solidity
 skills:
-  Proficient:
-    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum mauris ac tortor hendrerit.
-    - Integer at velit molestie, fermentum quam non, suscipit nibh.
-    - Ut tincidunt purus ut lorem viverra, ac aliquet lacus tempus.
-  Competent:
-    - Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-    - Vivamus tincidunt mauris non consequat aliquet.
+  For Web Development, we use:
+    - Gatsby / NextJS for fast, modern SSR and SSG sites and apps.
+    - ReactJS for building interactive user interfaces.
+    - Tailwind CSS for responsive, utility-first styling.
+  For App Development, we use:
+    - React Native for cross-platform mobile applications.
+    - Expo for streamlined app development and deployment.
+  For Our Infrastructure, we use:
+    - AWS for scalable and reliable cloud services.
+    - PostgreSQL as a centralized and robust database solution.
+    - Terraform for infrastructure as code (IaC).
+    - Github Actions for automating workflows and tests.
+    - Liquibase to manage DDL and DML changes with version control.
+  We also conduct WorkSHops teaching...:
+    - Blockchain development with Solidity using the Hardhat framework.

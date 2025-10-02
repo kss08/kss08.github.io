@@ -44,13 +44,13 @@ const SkillsPage: React.FC = () => {
       </>
       }
       {(skills.skills || skills.skillicons) &&
-        <div className="pt-12 lg:pt-24 pb-10">
+        <div className={`${skills.certificates && 'pt-12 lg:pt-24'} pb-10`}>
           <p className="text-2xl sm:text-3xl xl:text-4xl text-gray-900 dark:text-gray-200 font-medium inline-flex items-center">
             Skills
           </p>
           {skills.skillicons && <div className="mt-2 flex items-center gap-x-1 md:gap-x-2">
             {skills.skillicons.map((value) => {
-              return <div className='inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-600 dark:text-gray-400'>
+              return <div className='inline-flex justify-center items-center h-[2rem] w-[2rem] md:h-[2.375rem] md:w-[2.375rem] text-center text-gray-900 dark:text-gray-200'>
                 <Svg key={value} name={value} className="w-4 md:w-5"></Svg>
               </div>
             })}

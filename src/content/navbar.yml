@@ -1,10 +1,10 @@
-title: My Portfolio # replace with your title for the Navbar
+title: Sheares Web # replace with your title for the Navbar
 
 contact_buttons:
   # For Contact buttons. Optional, remove items to omit from navbar
-  - svgName: contact/gitlab # Gitlab Icon
-    link: https://gitlab.com/<your_account>
+  # - svgName: contact/gitlab # Gitlab Icon
+  #   link: https://gitlab.com/<your_account>
   - svgName: contact/github # Github Icon
-    link: https://github.com/<your_account>
+    link: https://github.com/ShearesWeb
   - svgName: contact/linkedin # LinkedIn Icon
-    link: https://linkedin.com/in/<your_account>
+    link: https://www.linkedin.com/company/nus-sheares-web

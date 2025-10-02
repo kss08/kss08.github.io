@@ -1,14 +1,15 @@
-title: "Hello, I'm [Your Name]"
+title: "Hello from Sheares Web!"
 description:
   - Welcome to my portfolio page! 🌱
-  - "As a [Your Profession], I [Your Professional Statement]."
+  - "We are a passionate committee of developers committed to empowering Shearites through cutting-edge infocommunication technologies"
 about:
-  About Me:
-  - text: I like Ultimate Frisbee
-  Endeavours:
-  - text: I'm aspiring to pass the XXX Certification
-    svgName: theme/spaceship
-  - text: I'm developing the XXX Project
-    svgName: theme/planet
-  - text: I'm currently interning in XXX
-    svgName: theme/astronaut
+  About Us:
+    - text: Our mission is to build user-centric digital tools that streamline operations, enhance communication, and improve daily life for Sheares Hall residents, JCRC, and SCRC alike.
+    - text: Beyond development, we foster a culture of learning by hosting engaging workshops and sharing practical knowledge at the forefront of technology.
+  Latest Endeavours:
+    - text: We maintain the Intranet, a central platform for Shearites to handle administrative tasks 
+      svgName: theme/spaceship
+    - text: We are deploying the Sheares App, an exciting app where Shearites can sign up and view hall events
+      svgName: theme/planet
+    - text: We look forward to developing an automated holiday subsidy system in Intranet for winter subsidy claims
+      svgName: theme/astronaut
