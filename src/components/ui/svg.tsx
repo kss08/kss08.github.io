@@ -18,7 +18,10 @@ const Svg: React.FC<SvgProps> = ({ name, className, ...rest }) => {
 
   if (!SvgComponent) return null;
 
-  return <SvgComponent className={className} {...rest} />;
+  return <SvgComponent
+    className={`text-gray-900 dark:text-gray-200 ${className || ""}`}
+    {...rest}
+  />;
 };
 
 export default Svg;
