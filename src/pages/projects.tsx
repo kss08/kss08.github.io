@@ -1,7 +1,6 @@
 import React from "react";
 import HomeLayout from "@/components/layout/home-layout";
 import { ProjectContent } from "@/types/projects";
-import test from "node:test";
 import ProjectCard from "@/components/ui/project-card";
 
 const ProjectsPage: React.FC = () => {

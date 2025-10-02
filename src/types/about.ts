@@ -1,10 +1,5 @@
-export interface AboutItem {
-    text: string;
-    svgName?: string; // optional SVG icon name
-}
-
 export interface AboutSection {
-    [sectionName: string]: AboutItem[];
+    [sectionName: string]: string[];
 }
 
 export interface AboutContent {
