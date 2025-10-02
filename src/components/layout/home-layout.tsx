@@ -8,10 +8,14 @@ import TailwindLogo from "@/assets/svg/tailwind.svg";
 import ContactButton from '../ui/contact-button';
 import DynamicLink from '../ui/dynamic-link';
 import { graphql, useStaticQuery } from "gatsby";
+import ThemeToggler from '../theme/dark-toggler';
+import { ThemeContext } from '../theme/theme-context';
 
 const navbar: NavbarContent = rawNavbarContent;
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
+    const { theme, toggleTheme } = React.useContext(ThemeContext)
+
     const data = useStaticQuery(graphql`
     query {
       site {
@@ -56,6 +60,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
                                 </div>
                             })}
                         </div>
+                        <ThemeToggler theme={theme} toggleTheme={toggleTheme}></ThemeToggler>
                     </div>
                 </nav>
                 <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
