@@ -1,30 +1,12 @@
 import React from "react";
 import HomeLayout from "@/components/layout/home-layout";
-import type { SkillsContent } from "@/types/skills";
+import rawSkillsContent from '@/content/skills.yml';
+import { SkillsContent } from "@/types/skills";
 import Svg from "@/components/ui/svg";
 
+const skills: SkillsContent = rawSkillsContent;
+
 const SkillsPage: React.FC = () => {
-  const skills: SkillsContent = {
-    description: ["Discover my projects where I demonstrate creativity and problem-solving skills."],
-    certificates: [
-      {
-        text: "Certified Sheares Web Developer",
-        link: "https://www.linkedin.com/company/nus-sheares-web"
-      },
-      {
-        text: "Certified Sheares Web UI/UX Designer",
-        link: "https://www.linkedin.com/company/nus-sheares-web"
-      }
-    ],
-    skills: {
-      "Web Development": [
-        "React",
-        "Gatsby",
-        "TailwindCSS",
-        "Github"
-      ]
-    }
-  }
 
   return (
     <HomeLayout>

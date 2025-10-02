@@ -1,33 +1,14 @@
 import React from "react";
 import HomeLayout from "@/components/layout/home-layout";
-import { ProjectContent } from "@/types/projects";
 import ProjectCard from "@/components/ui/project-card";
+import rawProjectsContent from '@/content/projects.yml';
+import { ProjectsContent } from "@/types/projects";
 import Svg from "@/components/ui/svg";
 
+const projects: ProjectsContent = rawProjectsContent;
+
 const ProjectsPage: React.FC = () => {
-  const projects: ProjectContent = {
-    description: ["Discover my projects where I demonstrate creativity and problem-solving skills."],
-    projects: [
-      {
-        name: "Project 1",
-        description: "Description of project",
-        date: "Aug 2025 - Present",
-        actions: [{
-          text: "Repo",
-          link: "https://github.com/ShearesWeb/ReactWorkSHop/blob/main/src/pages/index.tsx"
-        }]
-      },
-      {
-        name: "Project 2",
-        description: "Description of project",
-        date: "Aug 2025 - Present",
-        actions: [{
-          text: "Repo",
-          link: "https://github.com/ShearesWeb/ReactWorkSHop/blob/main/src/pages/index.tsx"
-        }]
-      }
-    ]
-  }
+
   return (
     <HomeLayout>
       <div className="pt-10 md:pt-0 grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 flex items-center">

@@ -1,30 +1,13 @@
 import React from "react";
 import HomeLayout from "@/components/layout/home-layout";
+import rawExperiencesContent from '@/content/experiences.yml';
 import { ExperiencesContent } from "@/types/experiences";
 import Svg from "@/components/ui/svg";
 import ActionButton from "@/components/ui/action-button";
 
+const experiences: ExperiencesContent = rawExperiencesContent;
+
 const ExperiencesPage: React.FC = () => {
-  const experiences: ExperiencesContent = {
-    description: ["Learn about my professional experiences that have shaped my journey in [Your Field]."],
-    experiences: [
-      {
-        name: "Internship: [Company Name]",
-        description: [
-          "Description of tasks and responsibilities during the internship.",
-          "Details about projects worked on and skills utilized."
-        ],
-        date: "Start Date - End Date",
-        color: "blue",
-        actions: [
-          {
-            text: "Recommendation Letter",
-            asset: "dummy.pdf"
-          }
-        ]
-      }
-    ]
-  }
 
   return (
     <HomeLayout>

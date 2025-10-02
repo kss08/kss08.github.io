@@ -9,7 +9,7 @@ export interface ProjectItem {
     actions?: ActionButtonField[];
 }
 
-export interface ProjectContent {
+export interface ProjectsContent {
     description: string[];
     projects: ProjectItem[];
 }
